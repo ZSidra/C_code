@@ -9,11 +9,11 @@ int main()
 	int* right = arr + sz - 1;
 	while(1)
 	{
-		if ((*left) % 2 == 1)
+		if (left < right && (*left) % 2 == 1)
 		{
 			left++;
 		}
-		if ((*right) % 2 == 0)
+		if (left < right && (*right) % 2 == 0)
 		{
 			right--;
 		}

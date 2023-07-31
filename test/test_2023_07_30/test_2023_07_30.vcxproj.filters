@@ -36,7 +36,7 @@
     <ClCompile Include="奇偶数顺序.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="杨辉三角.c">
+    <ClCompile Include="三角.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
