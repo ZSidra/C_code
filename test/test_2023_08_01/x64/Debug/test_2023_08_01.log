@@ -1,8 +1,3 @@
-﻿  test.c
-D:\Code\c_code\test\test_2023_08_01\test.c(6,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“char *”
-D:\Code\c_code\test\test_2023_08_01\test.c(6,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "char *" 的参数 1 冲突
-D:\Code\c_code\test\test_2023_08_01\test.c(12,15): warning C4047: “=”:“char *”与“int”的间接级别不同
-D:\Code\c_code\test\test_2023_08_01\test.c(15,13): warning C4047: “函数”:“char **”与“char *[3][5]”的间接级别不同
-D:\Code\c_code\test\test_2023_08_01\test.c(15,10): warning C4024: “test”: 形参和实参 1 的类型不同
-D:\Code\c_code\test\test_2023_08_01\test.c(7): warning C4716: “test”: 必须返回一个值
+﻿  字符串左旋.c
+D:\Code\c_code\test\test_2023_08_01\字符串左旋.c(7,12): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   test_2023_08_01.vcxproj -> D:\Code\c_code\test\test_2023_08_01\x64\Debug\test_2023_08_01.exe
