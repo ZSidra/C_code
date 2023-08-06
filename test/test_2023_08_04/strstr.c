@@ -5,44 +5,38 @@
 char* myStrstr(const char* dst, const char* src)
 {
 	assert(dst && src);
-	char* s1 = (char*)dst;
-	char* s2 = (char*)src;
-	char* flag = dst;
+	char* ln = (char*)dst;
+	char* sh = (char*)src;
+	char* s1 = NULL;
 
-	while (s1++)
+	if (*sh == 0)
 	{
+		return NULL;
+	}
 
-		if (*s1 == *s2)
+	while (*ln)
+	{
+		s1 = ln;
+		sh = (char*)src;
+		
+		while (*s1 && *sh && (*s1 == *sh))
 		{
-			flag = dst;
-			while (s1 && s2)
-			{
-				if (*s1 == *s2)
-				{
-					s1++;
-					s2++;
-				}
-				else
-				{
-					s1 = flag;
-					s2 = src;
-					break;
-				}
-			}
+			s1++;
+			sh++;
 		}
+		if (*sh == 0)
+		{
+			return ln;
+		}
+		ln++;
 	}
-	if (s1 == 0)
-	{
-		return 0;
-	}
-	if (s2 == 0)
-		return dst;
 }
 
 int main()
 {
 	char ch[20] = { "wocaonima" };
 	char arr[] = { "cao" };
+	//char arr[3] = {0};
 	printf("%s", myStrstr(ch, arr));
 
 	return 0;
