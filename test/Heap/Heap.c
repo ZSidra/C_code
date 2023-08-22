@@ -58,6 +58,10 @@ void heapPush(Heap* hp, HeapDataType data)
 void adjustDwon(HeapDataType* array, int size, int parent)
 {
 	int child = parent * 2 + 1;
+	if (child + 1 < size && array[child + 1] < array[child])
+	{
+		child++;
+	}
 	while (array[child] < array[parent])
 	{
 		if (child + 1 < size && array[child + 1] < array[child])
@@ -131,4 +135,33 @@ void heapSort(int* array, int size)
 		swap(array, 0, size - j);
 		adjustDwon(array, size - j , 0);
 	}
+}
+
+void topK(int* array, int k, int size)
+{
+	for (int i = k - 1; i >= 0; i--)
+	{
+		adjustDwon(array, k, i);
+	}
+
+	for (int j = k; j < size; j++)
+	{
+		if (array[j] > array[0])
+		{
+			swap(array, j, 0);
+			adjustDwon(array, k, 0);
+		}
+	}
+
+	for (int l = 1; l < k; l++)
+	{
+		swap(array, 0, k - l);
+		adjustDwon(array, k - l, 0);
+	}
+
+	for (int n = 0; n < k; n++)
+	{
+		printf("%d ", array[n]);
+	}
+	printf("\n");
 }

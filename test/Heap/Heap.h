@@ -32,4 +32,6 @@ bool heapEmpty(Heap* hp);
 
 void heapPrint(Heap* hp);
 
-void heapSort(Heap* hp, int size);
+void heapSort(int* array, int size);
+
+void topK(int* array, int k, int size);
