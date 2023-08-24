@@ -15,7 +15,7 @@ void stackPush(Stack* ps, DataType data)
 	if(ps->capacity == ps->top)
 	{
 		int newcapacity = ps->capacity == 0 ? 4 : ps->capacity * 2;
-		DataType* temp = (DataType*)realloc(ps->array, sizeof(DataType) * ps->capacity);
+		DataType* temp = (DataType*)realloc(ps->array, sizeof(DataType) * newcapacity);
 		if (temp == NULL)
 		{
 			perror("realloc");
