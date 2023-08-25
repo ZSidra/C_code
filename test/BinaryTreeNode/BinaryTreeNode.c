@@ -110,3 +110,92 @@ BinaryTreeNode* binaryTreeFind(BinaryTreeNode* root, BTDataType x)
 		return ret;
 	return binaryTreeFind(root->right, x);
 }
+
+int binaryTreeDepth(BinaryTreeNode* root)
+{
+	if (root == NULL)
+	{
+		return 0;
+	}
+	int left = binaryTreeDepth(root->left);
+	int right = binaryTreeDepth(root->right);
+	return 1 + (left > right ? left : right);
+}
+
+void BinaryTreeDestory(BinaryTreeNode* root)
+{
+	if (root == NULL)
+	{
+		return;
+	}
+
+	BinaryTreeDestory(root->left);
+	BinaryTreeDestory(root->right);
+	free(root);
+}
+
+void LevelOrder(BinaryTreeNode* root)
+{
+	Queue q;
+	queueInit(&q);
+	if (root)
+	{
+		queuePush(&q, root);
+	}
+
+	while (!queueEmpty(&q))
+	{
+		BinaryTreeNode* front = queueFront(&q);
+		queuePop(&q);
+		printf("%d ", front->data);
+		if (front->left)
+		{
+			queuePush(&q, front->left);
+		}
+		if (front->right)
+		{
+			queuePush(&q, front->right);
+		}
+	}
+	printf("\n");
+	queueDestroy(&q);
+}
+
+int BinaryTreeComplete(BinaryTreeNode* root)
+{
+	Queue q;
+	queueInit(&q);
+	if (root)
+	{
+		queuePush(&q, root);
+	}
+
+	while (!queueEmpty(&q))
+	{
+		BinaryTreeNode* front = queueFront(&q);
+		queuePop(&q);
+
+		if (front)
+		{
+			queuePush(&q, front->left);
+			queuePush(&q, front->right);
+		}
+		else
+		{
+			break;
+		}
+	}
+	while (!queueEmpty(&q))
+	{
+		BinaryTreeNode* front = queueFront(&q);
+		queuePop(&q);
+		if (front)
+		{
+			queueDestroy(&q);
+			return false;
+		}
+	}
+
+	queueDestroy(&q);
+	return true;
+}

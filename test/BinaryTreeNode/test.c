@@ -4,7 +4,7 @@
 int main()
 {
 	BinaryTreeNode* root = creatBinaryTree();
-	printf("%d" , binaryTreeFind(root, 3)->data);
+	printf("%d" , binaryTreeDepth(root));
 
 	system("pause");
 

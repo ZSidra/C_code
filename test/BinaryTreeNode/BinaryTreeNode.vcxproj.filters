@@ -18,12 +18,18 @@
     <ClInclude Include="BinaryTreeNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\Queue\Queue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BinaryTreeNode.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="test.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Queue\Queue.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

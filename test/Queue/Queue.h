@@ -4,7 +4,8 @@
 #include<assert.h>
 #include<stdbool.h>
 
-typedef int DataType;
+typedef struct BinaryTreeNode;
+typedef struct BinaryTreeNode* DataType;
 typedef struct Node
 {
 	DataType data;
