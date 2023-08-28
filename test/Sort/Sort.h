@@ -1,6 +1,8 @@
 #pragma once
 #include<stdio.h>
 #include<stdbool.h>
+#include<stdlib.h>
+#include<string.h>
 
 void printArray(int* array, int n);
 //插入排序
@@ -15,3 +17,7 @@ void shellSort(int* array, int n);
 void heapSort(int* array, int size);
 //快速排序
 void quickSort(int* array, int begin, int end);
+//归并排序
+void mergeSort(int* array, int n);
+//计数排序
+void countSort(int* array, int n);

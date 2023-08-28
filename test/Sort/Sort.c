@@ -269,11 +269,11 @@ void quickSort(int* array, int begin, int end)
 	}
 
 	//hoare版本
-	int key = partSort1(array, begin, end);
+	//int key = partSort1(array, begin, end);
 	//挖坑法
 	//int key = partSort2(array, begin, end);
 	//前后指针法
-	//int key = partSort3(array, begin, end);
+	int key = partSort3(array, begin, end);
 
 	if (end - begin < 20)
 	{
@@ -283,4 +283,98 @@ void quickSort(int* array, int begin, int end)
 
 	quickSort(array, begin, key - 1);
 	quickSort(array, key + 1, end);
+}
+
+void _mergeSort(int* array, int* temp, int begin, int end)
+{
+	if (begin >= end)
+	{
+		return;
+	}
+
+	int mid = (begin + end) / 2;
+
+	_mergeSort(array, temp, begin, mid);
+	_mergeSort(array, temp, mid + 1, end);
+
+	int lefbegin = begin;
+	int rhtbegin = mid + 1;
+	int i = lefbegin;
+	while (lefbegin <= mid && rhtbegin <= end)
+	{
+		if (array[lefbegin] <= array[rhtbegin])
+		{
+			temp[i++] = array[lefbegin++];
+		}
+		else
+		{
+			temp[i++] = array[rhtbegin++];
+		}
+	}
+
+	while (lefbegin <= mid)
+	{
+		temp[i++] = array[lefbegin++];
+	}
+	while (rhtbegin <= end)
+	{
+		temp[i++] = array[rhtbegin++];
+	}
+
+	memcpy(array + begin, temp + begin, sizeof(int) * (end - begin + 1));
+}
+
+void mergeSort(int* array, int n)
+{
+	int* temp = (int*)malloc(sizeof(int) * n);
+	if (temp == NULL)
+	{
+		perror("malloc");
+		exit(0);
+	}
+
+	_mergeSort(array, temp, 0, n - 1);
+
+	free(temp);
+	temp = NULL;
+}
+
+void countSort(int* array, int n)
+{
+	int maxvalue = array[0];
+	int minvalue = array[0];
+	for (int i = 0; i < n; i++)
+	{
+		if (array[i] > maxvalue)
+		{
+			maxvalue = array[i];
+		}
+		if (array[i] < minvalue)
+		{
+			minvalue = array[i];
+		}
+	}
+
+	int range = maxvalue - minvalue + 1;
+	int* count = (int*)malloc(sizeof(int) * range);
+	if (count == NULL)
+	{
+		perror("malloc");
+		exit(0);
+	}
+	memset(count, 0, sizeof(int) * range);
+
+	for (int j = 0; j < n; j++)
+	{
+		count[array[j] - minvalue]++;
+	}
+	int m = 0;
+	for (int k = 0; k < range; k++)
+	{
+		while (count[k]--)
+		{
+			array[m++] = k + minvalue;
+		}
+	}
+	free(count);
 }
