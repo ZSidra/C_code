@@ -1,0 +1,21 @@
+﻿  Queue.c
+D:\Code\c_code\test\Queue\Queue.h(7,30): warning C4091: “typedef ”: 没有声明变量时忽略“BinaryTreeNode”的左侧
+  BinaryTreeNode.c
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(143,21): warning C4047: “函数”:“DataType”与“BinaryTreeNode *”的间接级别不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(143,17): warning C4024: “queuePush”: 形参和实参 2 的类型不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(153,29): warning C4047: “函数”:“DataType”与“BinaryTreeNode *”的间接级别不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(153,23): warning C4024: “queuePush”: 形参和实参 2 的类型不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(157,30): warning C4047: “函数”:“DataType”与“BinaryTreeNode *”的间接级别不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(157,23): warning C4024: “queuePush”: 形参和实参 2 的类型不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(148,19): warning C4047: “初始化”:“BinaryTreeNode *”与“DataType”的间接级别不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(170,21): warning C4047: “函数”:“DataType”与“BinaryTreeNode *”的间接级别不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(170,17): warning C4024: “queuePush”: 形参和实参 2 的类型不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(180,29): warning C4047: “函数”:“DataType”与“BinaryTreeNode *”的间接级别不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(180,23): warning C4024: “queuePush”: 形参和实参 2 的类型不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(181,30): warning C4047: “函数”:“DataType”与“BinaryTreeNode *”的间接级别不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(181,23): warning C4024: “queuePush”: 形参和实参 2 的类型不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(175,19): warning C4047: “初始化”:“BinaryTreeNode *”与“DataType”的间接级别不同
+D:\Code\c_code\test\BinaryTreeNode\BinaryTreeNode.c(190,19): warning C4047: “初始化”:“BinaryTreeNode *”与“DataType”的间接级别不同
+  test.c
+  正在生成代码...
+  BinaryTreeNode.vcxproj -> D:\Code\c_code\test\BinaryTreeNode\x64\Debug\BinaryTreeNode.exe
