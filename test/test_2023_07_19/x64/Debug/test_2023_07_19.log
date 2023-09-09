@@ -1,3 +1,0 @@
-﻿  转义符.c
-D:\Code\c_code\test\test_2023_07_19\转义符.c(17,2): warning C4013: “system”未定义；假设外部返回 int
-  test_2023_07_19.vcxproj -> D:\Code\c_code\test\test_2023_07_19\x64\Debug\test_2023_07_19.exe

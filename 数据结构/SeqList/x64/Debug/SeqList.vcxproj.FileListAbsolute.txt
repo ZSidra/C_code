@@ -1,1 +1,0 @@
-D:\Code\c_code\test\SeqList\x64\Debug\SeqList.exe

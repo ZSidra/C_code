@@ -1,1 +1,0 @@
-D:\Code\c_code\test\Sort\x64\Debug\Sort.exe
