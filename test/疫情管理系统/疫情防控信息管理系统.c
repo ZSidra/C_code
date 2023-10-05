@@ -18,11 +18,7 @@ void LoadContact(Contact* pc)
 		return;
 	}
 
-	//PeoInfo tmp = { 0 };
-	//while (fscanf(pf , "%s,%s,%s,%d,%s,%s,%s,%f\n", pc->data[pc->sz].no, pc->data[pc->sz].id, pc->data[pc->sz].name, &pc->data[pc->sz].age, pc->data[pc->sz].sex, pc->data[pc->sz].phone_num, pc->data[pc->sz].health, &pc->data[pc->sz].temp) != EOF)
-	//{
-	//	pc->sz++;
-	//}
+
 	char row[80];
 	char* token;
 	while (fgets(row, 80, pf) != NULL) {
